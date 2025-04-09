@@ -1,14 +1,20 @@
-// import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.Scanner;
 
-// import org.junit.jupiter.api.Test;
+public class Main 
+{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-public class Main {
-  public static void main(String[] args) {
-    System.out.println("Hello world!");
-  }
+        System.out.print("Podaj liczbę gwiazdek: ");
+        int liczbaGwiazdek = scanner.nextInt();
 
-  // @Test
-  // void addition() {
-  //     assertEquals(2, 1 + 1);
-  // }
+        for (int i = 1; i <= liczbaGwiazdek; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
 }
